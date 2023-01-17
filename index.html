@@ -4,51 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="img/icon.png">
-    <title>Calculator - Gabriel Meza</title>
     <link rel="stylesheet" href="css/style.css">
+    <title>Calculator - Gabriel Meza </title>
 </head>
+
 <body>
-    
-    <div class="container">
-        <form name="calcu">
-            <input type="textfield" name="ans" value="" autocomplete="off" readonly class="boca">
 
-            <br>
-
-            <div class="container2">
-
-            
-                <input type="button" value="7" onclick="document.calcu.ans.value+='7'" class="boton">
-                <input type="button" value="8" onclick="document.calcu.ans.value+='8'" class="boton">
-                <input type="button" value="9" onclick="document.calcu.ans.value+='9'" class="boton">
-                <input type="button" value="+" onclick="document.calcu.ans.value+='+'" class="boton este">
-
-                <br>
-
-                <input type="button" value="4" onclick="document.calcu.ans.value+='4'" class="boton">
-                <input type="button" value="5" onclick="document.calcu.ans.value+='5'" class="boton">
-                <input type="button" value="6" onclick="document.calcu.ans.value+='6'" class="boton">
-                <input type="button" value="-" onclick="document.calcu.ans.value+='-'" class="boton este">
-
-                <br>
-
-                <input type="button" value="1" onclick="document.calcu.ans.value+='1'" class="boton">
-                <input type="button" value="2" onclick="document.calcu.ans.value+='2'" class="boton">
-                <input type="button" value="3" onclick="document.calcu.ans.value+='3'" class="boton">
-                <input type="button" value="X" onclick="document.calcu.ans.value+='*'" class="boton este">
-
-                <br>
-
-                <input type="button" value="0" onclick="document.calcu.ans.value+='0'" class="boton">
-                <input type="button" value="=" onclick="document.calcu.ans.value=eval(document.calcu.ans.value)" class="boton gris">
-                <input type="reset" value="AC" class="boton gris">
-                <input type="button" value="/" onclick="document.calcu.ans.value+='/'" class="boton este">
+    <div class="contenedor">
+        <div id="calculator">
+            <div id="display">0</div>
+            <div id="buttons">
+                <button onclick="insertarNum('7')">7</button>
+                <button onclick="insertarNum('8')">8</button>
+                <button onclick="insertarNum('9')">9</button>
+                <button onclick="insertarOperacion('+')" class="estos aqui"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="insertarNum('4')">4</button>
+                <button onclick="insertarNum('5')">5</button>
+                <button onclick="insertarNum('6')">6</button>
+                <button onclick="insertarOperacion('-')" class="estos aqui"><i class="fa-solid fa-minus"></i></button>
+                <button onclick="insertarNum('1')">1</button>
+                <button onclick="insertarNum('2')">2</button>
+                <button onclick="insertarNum('3')">3</button>
+                <button onclick="insertarOperacion('*')" class="estos aqui"><i class="fa-solid fa-xmark"></i></button>
+                <button id="btn-c" class="estos">AC</button>
+                <button onclick="insertarNum('0')">0</button>
+                <button id="btn-igual"><i class="fa-solid fa-equals"></i></button>
+                <button onclick="insertarOperacion('/')" class="estos aqui"><i class="fa-solid fa-divide"></i></button>
             </div>
-        </form>
-        
+        </div>
+        <p class="p">Developed by <a href="#">Gabriel Meza</a></p>
     </div>
-    <p>Developed by <a href="https://www.facebook.com/profile.php?id=100019093819038">Gabriel Meza</a></p>
+
+    <script src="js/main.js"></script>
 
 </body>
+
 </html>
